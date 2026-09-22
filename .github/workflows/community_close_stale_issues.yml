@@ -1,7 +1,6 @@
+
 name: "Close Stale Issues"
 on:
-  schedule:
-    - cron: "0 2 * * 5"
   workflow_dispatch:
     inputs:
       debug-only:
@@ -13,6 +12,7 @@ on:
         type: number
         default: 1000
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   stale:
     if: github.repository_owner == 'zed-industries'

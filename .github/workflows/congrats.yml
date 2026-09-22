@@ -1,9 +1,9 @@
+
 name: Congratsbot
 
 on:
-  push:
-    branches: [main]
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   check-author:
     if: ${{ github.repository_owner == 'zed-industries' }}

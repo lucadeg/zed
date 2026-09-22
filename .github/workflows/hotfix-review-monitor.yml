@@ -1,3 +1,4 @@
+
 # Hotfix Review Monitor
 #
 # Runs daily and checks for merged PRs with the 'hotfix' label that have not
@@ -15,10 +16,9 @@
 name: Hotfix Review Monitor
 
 on:
-  schedule:
-    - cron: "30 13 * * 1-5" # 1:30 PM UTC weekdays
   workflow_dispatch: {}
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: read
   pull-requests: read

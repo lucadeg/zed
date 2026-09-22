@@ -1,10 +1,10 @@
+
 name: Update Duplicate Magnets Issue
 
 on:
-  schedule:
-    - cron: "0 6 * * 1,4" # Mondays and Thursdays at 6 AM UTC
   workflow_dispatch:
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   update-duplicate-magnets:
     runs-on: ubuntu-latest

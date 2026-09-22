@@ -1,10 +1,10 @@
+
 # Generated from xtask::workflows::deploy_nightly_docs
 # Rebuild with `cargo xtask workflows`.
 name: deploy_nightly_docs
 on:
-  push:
-    branches:
-    - main
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   deploy_docs:
     if: (github.repository_owner == 'zed-industries' || github.repository_owner == 'zed-extensions')

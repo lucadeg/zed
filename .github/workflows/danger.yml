@@ -1,15 +1,10 @@
+
 # Generated from xtask::workflows::danger
 # Rebuild with `cargo xtask workflows`.
 name: danger
 on:
-  pull_request:
-    types:
-    - opened
-    - synchronize
-    - reopened
-    - edited
-    branches:
-    - main
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   danger:
     if: (github.repository_owner == 'zed-industries' || github.repository_owner == 'zed-extensions')

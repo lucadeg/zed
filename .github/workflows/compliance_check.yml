@@ -1,12 +1,12 @@
+
 # Generated from xtask::workflows::compliance_check
 # Rebuild with `cargo xtask workflows`.
 name: compliance_check
 env:
   CARGO_TERM_COLOR: always
 on:
-  schedule:
-  - cron: 30 17 * * 2
   workflow_dispatch: {}
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   scheduled_compliance_check:
     if: (github.repository_owner == 'zed-industries' || github.repository_owner == 'zed-extensions')

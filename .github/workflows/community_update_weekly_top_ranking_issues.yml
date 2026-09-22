@@ -1,10 +1,10 @@
+
 name: Update Weekly Top Ranking Issues
 
 on:
-  schedule:
-    - cron: "0 15 * * *"
   workflow_dispatch:
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   update_top_ranking_issues:
     runs-on: namespace-profile-2x4-ubuntu-2404

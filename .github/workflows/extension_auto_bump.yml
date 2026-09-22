@@ -1,15 +1,10 @@
+
 # Generated from xtask::workflows::extension_auto_bump
 # Rebuild with `cargo xtask workflows`.
 name: extension_auto_bump
 on:
-  push:
-    branches:
-    - main
-    paths:
-    - extensions/**
-    - '!extensions/test-extension/**'
-    - '!extensions/workflows/**'
-    - '!extensions/*.md'
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   detect_changed_extensions:
     if: (github.repository_owner == 'zed-industries' || github.repository_owner == 'zed-extensions')

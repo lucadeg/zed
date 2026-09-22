@@ -1,3 +1,4 @@
+
 # Generated from xtask::workflows::release_nightly
 # Rebuild with `cargo xtask workflows`.
 name: release_nightly
@@ -5,9 +6,8 @@ env:
   CARGO_TERM_COLOR: always
   RUST_BACKTRACE: '1'
 on:
-  schedule:
-  - cron: 0 */4 * * *
   workflow_dispatch: {}
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   check_nightly_tag:
     if: (github.repository_owner == 'zed-industries' || github.repository_owner == 'zed-extensions')

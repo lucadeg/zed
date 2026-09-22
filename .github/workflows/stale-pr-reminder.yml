@@ -1,3 +1,4 @@
+
 # Stale PR Review Reminder
 #
 # Runs daily on weekdays (second run at 8 PM UTC disabled during rollout) and posts a Slack summary of open PRs that
@@ -13,11 +14,9 @@
 name: Stale PR Review Reminder
 
 on:
-  schedule:
-    - cron: "0 14 * * 1-5" # 2 PM UTC weekdays
-    # - cron: "0 20 * * 1-5" # 8 PM UTC weekdays — enable after initial rollout
   workflow_dispatch: {}
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: read
   pull-requests: read
